@@ -34,15 +34,8 @@
         }
 
         header {
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .logo {
-            max-width: 200px;
-            height: auto;
-            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-            margin-bottom: 1rem;
+            padding: 0;
+            display: none;
         }
 
         main {
@@ -104,57 +97,64 @@
         }
 
         footer {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            font-size: 0.9rem;
-            line-height: 1.8;
+            background: #ffffff;
+            padding: 1rem 2rem;
+            font-size: 0.85rem;
+            line-height: 1.4;
             color: #333;
         }
 
         .footer-content {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: 3rem;
+            justify-content: space-between;
         }
 
         .footer-logo {
-            max-width: 120px;
+            max-width: 80px;
             height: auto;
             flex-shrink: 0;
         }
 
         .footer-text {
-            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-left: auto;
+        }
+
+        .footer-info-block {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
         }
 
         .company-info {
-            margin-bottom: 0.5rem;
             color: #333;
+            white-space: nowrap;
         }
 
         .email {
             color: #2c5f8d;
             text-decoration: none;
             transition: opacity 0.3s ease;
+            white-space: nowrap;
         }
 
         .email:hover {
             opacity: 0.8;
         }
 
-        .footer-links {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
         .footer-links a {
             color: #2c5f8d;
             text-decoration: none;
             transition: opacity 0.3s ease;
+            white-space: nowrap;
+            padding-left: 1.5rem;
+            border-left: 1px solid rgba(0, 0, 0, 0.2);
         }
 
         .footer-links a:hover {
@@ -195,7 +195,6 @@
 </head>
 <body>
     <header>
-        <img src="img/logo.jpg" alt="CMM Yachting Logo" class="logo">
     </header>
 
     <main>
@@ -210,10 +209,8 @@
         <div class="footer-content">
             <img src="img/logo.jpg" alt="CMM Yachting Logo" class="footer-logo">
             <div class="footer-text">
-                <div class="company-info">
-                    CMM Yachting | Maximilian Miller | Karlsfelder Str. 44a | 80995 München
-                </div>
-                <div class="company-info">
+                <div class="footer-info-block">
+                    <span class="company-info">CMM Yachting | Maximilian Miller | Karlsfelder Str. 44a | 80995 München</span>
                     <a href="mailto:booking@cmm-yachting.de" class="email">booking@cmm-yachting.de</a>
                 </div>
                 <div class="footer-links">
