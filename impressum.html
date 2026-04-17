@@ -16,8 +16,11 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            background: url('img/bg.jpg') no-repeat center center fixed;
+            background-image: url('img/bg.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
             background-size: cover;
+            background-attachment: fixed;
             color: #ffffff;
             position: relative;
         }
@@ -139,6 +142,13 @@
 
             .footer-logo {
                 max-width: 100px;
+            }
+        }
+
+        @supports (-webkit-touch-callout: none) {
+            body {
+                background-attachment: scroll;
+                min-height: 100svh;
             }
         }
     </style>

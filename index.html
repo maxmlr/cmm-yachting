@@ -16,8 +16,11 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            background: url('img/bg.jpg') no-repeat center center fixed;
+            background-image: url('img/bg.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
             background-size: cover;
+            background-attachment: fixed;
             color: #ffffff;
             position: relative;
         }
@@ -153,8 +156,12 @@
             text-decoration: none;
             transition: opacity 0.3s ease;
             white-space: nowrap;
-            padding-left: 1.5rem;
-            border-left: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .footer-links {
+            width: 100%;
+            text-align: center;
+            margin-top: 0.25rem;
         }
 
         .footer-links a:hover {
@@ -187,8 +194,24 @@
                 text-align: center;
             }
 
+            .footer-text {
+                margin-left: 0;
+            }
+
+            .footer-info-block {
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+
             .footer-logo {
                 max-width: 100px;
+            }
+        }
+
+        @supports (-webkit-touch-callout: none) {
+            body {
+                background-attachment: scroll;
+                min-height: 100svh;
             }
         }
     </style>
